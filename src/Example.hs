@@ -12,7 +12,7 @@
 {-# LANGUAGE FlexibleInstances          #-}
 {-# LANGUAGE DeriveGeneric              #-}
 
-module Lib
+module Example
     ( startApp
     ) where
 
