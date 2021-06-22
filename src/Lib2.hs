@@ -19,8 +19,6 @@ module Lib2
 import Data.Aeson
 import Data.Aeson.TH
 import Servant
-import Servant.Elm
-import Elm
 import Database.Persist
 import Database.Persist.Sql
 import Database.Persist.TH
@@ -45,7 +43,6 @@ User
 -- $(deriveJSON defaultOptions ''User)
 instance FromJSON User
 instance ToJSON User
-instance ElmType User
 
 type API = "getAllUsers" :> Get '[JSON] [User]
            :<|> "postUser" :> ReqBody '[JSON] User :> Post '[JSON] User
