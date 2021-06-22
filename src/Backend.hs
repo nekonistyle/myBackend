@@ -1,9 +1,6 @@
--- general
-{-# LANGUAGE TemplateHaskell       #-}
-{-# LANGUAGE FlexibleContexts   #-}
--- servant
+{-# LANGUAGE TemplateHaskell            #-}
+{-# LANGUAGE FlexibleContexts           #-}
 {-# LANGUAGE DataKinds                  #-}
--- persistent
 {-# LANGUAGE GADTs                      #-}
 {-# LANGUAGE MultiParamTypeClasses      #-}
 {-# LANGUAGE QuasiQuotes                #-}
@@ -21,17 +18,14 @@ module Backend
     , dbAction
     ) where
 
--- general
 import Control.Monad.Reader
 import Control.Monad.Logger
 import Data.String.Conversions
--- servant
 import Data.Aeson
 import Data.Aeson.TH
 import Network.Wai
 import Network.Wai.Handler.Warp
 import Servant
--- persistent
 import Database.Persist
 import Database.Persist.Sql
 import Database.Persist.Sqlite
