@@ -1,10 +1,10 @@
 # Backend
 
-src/Lib.hs : Main definitions of backend.
+src/Lib.hs : Main definitions of server.
 
-src/Backend.hs : Library with "persistent" and "servant".
+src/Backend.hs : Library using "persistent" and "servant".
 
-src/Generator.hs : Library with "servant-test".
+src/Generator.hs : Library using "servant-elm".
 
 # How to start server
 
