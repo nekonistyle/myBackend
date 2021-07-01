@@ -39,7 +39,7 @@ inputMemoFormat toMsg memo =
               []
         ]
 
-viewMemo : Memo -> Html Msg
+viewMemo : Memo -> Html msg
 viewMemo memo =
     div []
         [ text ( memo.memoTitle ++ " / " ++ memo.memoContent )
