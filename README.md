@@ -1,6 +1,6 @@
 # persistent-servant-elm-example
 
-Simple Memo Application.
+Simple memo application.
 
 
 Backend : Haskell with "persistent" and "servant".
