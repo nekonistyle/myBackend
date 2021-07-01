@@ -1,3 +1,4 @@
-# myBackend
+# persistent-servant-elm-example
 
-Backend program using "servant" and "persistent" on Haskell.
+Backend : Haskell with "persistent" and "servant"
+Frontend : Elm with "servent-elm" on Haskell.
