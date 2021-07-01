@@ -48,26 +48,7 @@ elmOpts port =
   defElmOptions
   { urlPrefix = Static (append "http://localhost:" (cs (show port))) }
 
-
---mkSpec :: ( omited ) => Text -> Int -> Proxy dat -> Proxy api -> Text -> Spec
---mkSpec gDir port proxyData proxyApi moduleName =
---  Spec [gDir, moduleName]
---  (defElmImports
---    : toElmTypeSource proxyData
---    : toElmDecoderSource proxyData
---    : toElmEncoderSource proxyData
---    : generateElmForAPIWith (elmOpts port) proxyApi
---  )
-
---mkSpec :: ( omited ) => Text -> Int -> Proxy dat -> Proxy api -> Text -> Spec
---mkSpec gDir port proxyData proxyApi moduleName =
-
---generateElmModuleWith :: ( HasForeign LangElm EType api, GenerateList Etype (Foreign EType api)) => ElmOptions -> Namespace -> Text -> FilePath -> [DefineElm] -> Proxy api -> IO ()
--- NameSpace = [String]
-
-
-
---generate :: ( omited ) => Int -> Proxy dat -> Proxy api -> Text -> IO ()
+--generateElm :: ( omited ) => Int -> Proxy dat -> Proxy api -> Text -> IO ()
 generateElm port proxyData proxyApi moduleName =
   generateElmWith defDirOpts port proxyData proxyApi moduleName
 
@@ -85,8 +66,6 @@ generateElmWith dirOpts port proxyData proxyApi moduleName = do
 
     generateddir :: FilePath
     generateddir = generatedDir dirOpts
---  specsToDir [mkSpec generateddir port proxyData proxyApi moduleName] elmdir
---  where
 
 
 -- ( omited ) = ( HasForeign LangElm EType api, GenerateList EType (Foreign EType api ))
