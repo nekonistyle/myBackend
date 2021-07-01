@@ -46,6 +46,7 @@ viewMemo memo =
         ]
 
 
+
 --MAIN
 
 main =
@@ -71,16 +72,14 @@ type Model
 
 init : () -> (Model, Cmd Msg)
 init _ =
-    (initModel, getAllMemos GotAllMemos)
-
-initModel : Model
-initModel = Loading
+    (Loading, getAllMemos GotAllMemos)
 
 initMemo : Memo
 initMemo = {memoTitle = "", memoContent = ""}
 
 initMemoChange : MemoInput
 initMemoChange = TitleInput ""
+
 
 -- UPDATE
 
@@ -90,7 +89,6 @@ type Msg
     | GotPostedMemo (Result Http.Error Memo)
     | GetAllMemos
     | GotAllMemos (Result Http.Error (List Memo))
-
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
@@ -120,7 +118,6 @@ update msg model =
 
                 Err err ->
                     (Failure err, Cmd.none)
-
 
 
 -- SUBSCRIPTIONS
