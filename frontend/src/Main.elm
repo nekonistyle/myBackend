@@ -134,17 +134,6 @@ view model =
     div []
         [ viewData model ]
 
-createMemoButton : Html Msg
-createMemoButton =
-    button [ onClick (ChangeMemo initMemo initMemoChange) ]
-        [ text "Create New Memo" ]
-
-viewAllMemos : Html Msg
-viewAllMemos =
-    div []
-        [ button [ onClick GetAllMemos ] [ text "View All Memos" ]
-        ]
-
 viewData : Model -> Html Msg
 viewData model =
     case model of
@@ -190,6 +179,18 @@ createMemo memo =
         [ inputMemoFormat (ChangeMemo memo) memo
         , button [ onClick (PostMemo memo) ] [ text "Post" ]
         ]
+
+createMemoButton : Html Msg
+createMemoButton =
+    button [ onClick (ChangeMemo initMemo initMemoChange) ]
+        [ text "Create New Memo" ]
+
+viewAllMemos : Html Msg
+viewAllMemos =
+    div []
+        [ button [ onClick GetAllMemos ] [ text "View All Memos" ]
+        ]
+
 
 httpErrorToString : Http.Error -> String
 httpErrorToString err =
