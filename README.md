@@ -5,4 +5,4 @@ Simple Memo Application.
 
 Backend : Haskell with "persistent" and "servant".
 
-Frontend : Elm with "servent-elm" on Haskell.
+Frontend : Elm with JSONencoder/decoder made from "servent-elm" on Haskell.
