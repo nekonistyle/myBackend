@@ -69,7 +69,7 @@ insertMemo memo = do
 startApp :: IO ()
 startApp = do
   pool <- readyPool dbPath migrateAll
-  runServerWithCors port (Proxy :: Proxy API) (server pool)
+  runServerWithCors port (Proxy :: Proxy API) $ server pool
 
 generate :: IO ()
 generate =
