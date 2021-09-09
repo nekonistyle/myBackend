@@ -69,9 +69,9 @@ mkPool filePath =
   runStdoutLoggingT $ createSqlitePool (cs filePath) poolSize
 
 --CORS
-runServerWithCors :: HasServer api '[] => Int -> Proxy api -> (ConnectionPool -> Server api) -> ConnectionPool -> IO ()
-runServerWithCors port proxy server pool =
-  run port $ cors (const $ Just policy) $ serve proxy $ server pool
+runServerWithCors :: HasServer api '[] => Int -> Proxy api -> Server api -> IO ()
+runServerWithCors port proxy server =
+  run port $ cors (const $ Just policy) $ serve proxy server
   where
     policy :: CorsResourcePolicy
     policy = simpleCorsResourcePolicy
