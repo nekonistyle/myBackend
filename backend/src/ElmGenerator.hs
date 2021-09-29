@@ -32,8 +32,6 @@ import Elm.Derive as ED
 import Shelly
 
 
-deriveElmDef ED.defaultOptions ''String
-
 data DirOpts = DirOpts
   { srcDir :: FilePath
   , generatedDir :: FilePath
